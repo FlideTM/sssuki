@@ -2,7 +2,7 @@
 <table>
     <thead>
         <tr>
-            <th>Номер</th>
+            <th>Контакт</th>
             <th>Имя Фамилия</th>
             <th>Заказ</th>
             <th>Срок</th>
@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr>
-            <th>1</th>
+            <td>Телеграм: @tupoi_hui</td>
             <td>Сука Залупович</td>
             <td>Сделать хуйню</td>
             <td>до 21.01.2023</td>
@@ -22,10 +22,13 @@
 </template>
 <style scoped>
 table{
-    border: 1px solid black;
     width: 100%;
+    border-collapse: collapse;
 }
 tr, td, th{
     border: 1px solid black;
+}
+th {
+    background-color: #42b983;
 }
 </style>

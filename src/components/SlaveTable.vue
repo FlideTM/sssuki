@@ -2,7 +2,7 @@
     <table>
         <thead>
             <tr>
-                <th>Номер</th>
+                <th>Контакт</th>
                 <th>Имя Фамилия</th>
                 <th>Навыки</th>
                 <th>Средние сроки</th>
@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr>
-                <th>1</th>
+                <td>Телеграм: @sosu_hui</td>
                 <td>Мамкин Программист</td>
                 <td>Код писат</td>
                 <td>Неделя</td>
@@ -19,13 +19,16 @@
             </tr>
         </tbody>
     </table>
-    </template>
-    <style scoped>
-    table{
-        border: 1px solid black;
-        width: 100%;
-    }
-    tr, td, th{
-        border: 1px solid black;
-    }
-    </style>
+</template>
+<style scoped>
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+tr, td, th{
+    border: 1px solid gray;
+}
+th {
+    background-color: #42b983;
+}
+</style>

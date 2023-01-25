@@ -1,27 +1,44 @@
 <template>
 <div class="popup">
     <div class="front">
+        <span>Контакты</span>
+        <input type="text" placeholder="Контакты" v-model="form.contact" />
         <span>Имя Фамилия</span>
-        <input type="text" placeholder="Имя Фамилия" />
+        <input type="text" placeholder="Имя Фамилия" v-model="form.name" />
         <span>Заказ</span>
-        <input type="text" placeholder="Заказ" />
+        <input type="text" placeholder="Заказ" v-model="form.order" />
         <span>Срок выполнения</span>
-        <input type="date" placeholder="Срок выполнения" />
+        <input type="text" placeholder="Срок выполнения" v-model="form.deadlines" />
         <span>Цена</span>
-        <input type="number" placeholder="Цена" />
-        <div id="butt">
-            <input class="button" type="submit" value="Подтвердить" />
-            <input class="button" type="submit" value="Закрыть" />
-        </div>
+        <input type="number" placeholder="Цена" v-model="form.price" />
+        <input class="button" type="submit" value="Подтвердить" @click="created" />
+        {{ articleId }}
     </div>
-    <div class="back" @click="close()"></div>
+    <div class="back" @click="closePopup"></div>
+    
 </div>
 </template>
 <script>
+import axios from 'axios'
 export default{
+    data(){
+        return{
+            form:{
+                contact: '',
+                name: '',
+                order: '',
+                deadlines: '',
+                price: '',
+            },
+            articleId: 'null',
+        }
+    },
     methods:{
-        close(){
-            this.$emit(this.popup = false)
+        closePopup(){this.$emit('popups')},
+        async created() {
+        // POST request using axios with async/await
+            const response = await axios.post("http://localhost:8000/clientsAdd.php", this.form);
+            this.articleId = response.data;
         }
     }
 }
@@ -59,17 +76,19 @@ export default{
     font-size: 1vw;
     font-weight: bold;
 }
-#butt{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-}
 .button{
-    padding: 3px;
-    width: 45%;
+    padding: 5px;
+    width: 100%;
     border: 1px solid black;
-    font-size: 0.7vw;
+    font-size: 1vw;
     font-weight: bold;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: gray;
+}
+.button:active{
+    background-color: rgb(212, 212, 212);
 }
 .back{
     position: fixed;
