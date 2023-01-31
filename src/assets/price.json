@@ -1,0 +1,31 @@
+{
+    "employee":{
+        "developers":{
+            "frontend_developer": 70000,
+            "backend_developer": 100000,
+            "bot_maker": 50000
+        },
+        "designers":{
+            "web_designer": 80000,
+            "graphical_designer": 55000
+        },
+        "marketing":{
+            "email_marketolog": 65000,
+            "seo_spec": 51000,
+            "kontekst_spec": 35000,
+            "affiliate_marketing": 100000,
+            "smm_spec": 55000,
+            "targetolog": 75000
+        }
+    },
+    "services":{
+        "newsletter":{
+            "telegram": 4,
+            "instagram": 2,
+            "vk": 4,
+            "whatsapp": 3
+        },
+        "bots": 2500,
+        "design_social_networks": 3000
+    }
+}

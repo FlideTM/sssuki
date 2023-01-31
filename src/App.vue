@@ -1,7 +1,6 @@
 <template>
   <nav>
-    <router-link to="/">Клиенты</router-link>
-    <router-link to="/slaves">Исполнители</router-link>
+    <router-link to="/">Калькуляторы</router-link>
     <div class="topic" @click="topic = !topic">Сфера</div>
   </nav>
   <Topic v-if="topic" />
@@ -61,7 +60,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #1d523a;
+  color: #2e7e5a;
 }
 
 .topic{

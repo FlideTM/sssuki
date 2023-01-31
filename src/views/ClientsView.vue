@@ -12,7 +12,7 @@
 <script>
 import ClientTable from "@/components/ClientTable.vue"
 import Popup from "@/components/PopupClient.vue"
-import Calc from "@/components/CalculatePrise.vue"
+import Calc from "@/components/calculate/ProgrammistPrise.vue"
 export default{
   components:{
     ClientTable,

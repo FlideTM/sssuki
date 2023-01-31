@@ -37,7 +37,7 @@ export default{
         closePopup(){this.$emit('popups')},
         async created() {
         // POST request using axios with async/await
-            const response = await axios.post("http://localhost:8000/clientsAdd.php", this.form);
+            const response = await axios.post("http://localhost:3000/clientsAdd.php", this.form);
             this.articleId = response.data;
         }
     }
